@@ -1,7 +1,6 @@
 services:
   grok-search-mcp:
-    build: .
-    image: grok-search-http:local
+    image: ghcr.io/starlight02/grok-search:latest
     container_name: grok-search-mcp
     restart: unless-stopped
 
