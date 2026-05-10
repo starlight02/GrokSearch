@@ -1,0 +1,17 @@
+services:
+  grok-search-mcp:
+    build: .
+    image: grok-search-http:local
+    container_name: grok-search-mcp
+    restart: unless-stopped
+
+    env_file:
+      - ./.env
+
+    environment:
+      MCP_HOST: 0.0.0.0
+      MCP_PORT: "8000"
+      MCP_PATH: /mcp/
+
+    ports:
+      - "8000:8000"
