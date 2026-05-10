@@ -9,9 +9,9 @@ description = "MCP server for AI model search capabilities"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
-    "fastmcp>=2.3.0",
+    "fastmcp>=3.2.4",
     "httpx[socks]>=0.28.0",
-    "mcp[cli]>=1.21.2",
+    "mcp[cli]>=1.27.0",
     "tenacity>=8.0.0",
 ]
 
@@ -26,3 +26,4 @@ where = ["src"]
 
 [project.scripts]
 grok-search = "grok_search.server:main"
+grok-search-http = "grok_search.http_server:main"
